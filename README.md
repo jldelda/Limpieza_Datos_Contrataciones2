@@ -2,11 +2,12 @@
 
 
 *Esta herramienta digital forma parte de la Secretaría Ejecutiva del Sistema Nacional de Anticorrupción de la República de México [https://www.sesna.gob.mx/](www.sesna.gob.mx)*
+- code coverage percentage: ![coverage](https://img.shields.io/badge/coverage-10%25-yellowgreen)
+- stable release version: ![version](https://img.shields.io/badge/version-1.2.3-blue)
+- package manager release: ![gem](https://img.shields.io/badge/gem-2.2.0-blue)
 
 ## Tabla de contenidos:
 ---
-
-- [Badges o escudos](#badges-o-escudos)
 - [Descripción y contexto](#descripción-y-contexto)
 - [Guía de usuario](#guía-de-usuario)
 - [Guía de instalación](#guía-de-instalación)
@@ -17,30 +18,80 @@
 - [Licencia](#licencia)
 - [Limitación de responsabilidades - Solo BID](#limitación-de-responsabilidades)
 
-- code coverage percentage: ![coverage](https://img.shields.io/badge/coverage-10%25-yellowgreen)
-- stable release version: ![version](https://img.shields.io/badge/version-1.2.3-blue)
-- package manager release: ![gem](https://img.shields.io/badge/gem-2.2.0-blue)
-
 ## Descripción y contexto
 ---
-Esto es un archivo README. Debe contener la documentación de soporte uso de la herramienta digital. Las siguientes secciones son las secciones recomendadas que debes poner incluir en cualquier herramienta digital. Puedes descargar este archivo para que te sirva como plantilla.
+Este repositorio aloja el código y la documentación encargados del procesamiento y limpieza de los datos del Sistema Seis de la [Plataforma Nacional Digital](https://www.plataformadigitalnacional.org/contrataciones). Concretamente, el presente código en python se encarga de seguir los siguientes pasos:
 
-Asegúrate de empezar este archivo con una breve descripción sobre las funcionalidades y contexto de la herramienta digital. Sé conciso y al grano.
+1. Descarga de la base de datos
+2. Carga de datos en MongoDB y creación de archivos .csv
+3. Limpieza de datos
+
+Adicionalmente, este repositorio tendrá la documentación en formato Word y pdf para facilitar la lectura y entendimiento del proceso. Esta información se pueden encontrar en la carpeta /DOCUMENTACIÓN
+
+### 1. Descarga de la base de datos
+    Scripts en python encargados de descargar de la web (XXX) el dataset comprimido en formato .zip. Este script también se encargan de descomprimir y renombrar el archivo para llevar un buen control de versiones.
+
+    Este proceso se hace de manera semi-automática, es decir, el usuario es responsable de configurar los ambientes, instalar el MongoDB en local y ejecutar el script. En la documentación se provee una guía de todos estos pasos.
+
+    Como proceso adicional, se diseña un sistema automático de descarga de datos en la nube; sin embargo este repositorio sólo incluye el diseño teórico de dicho sistema (Ver documentación).
+
+### 2. Carga de datos en MongoDB y creación de archivos .csv
+_...In progress..._
+
+### 3. Limpieza de datos
+    _...In progress..._
+
+## Estructura de carpetas
+
+/Limpieza_Datos_Contratacoiones
+    /bin            # Scripts ejecutables y binarios
+    /docs           # Documentación (alternativamente /doc)
+        /adr        # Architecture Decision Records
+    /src            # Código fuente del proyecto
+        /data       # Scripts para descargar o generar datos
+        /database   # Scripts para configurar tu base de datos MongoDB
+        /analysis   # Scripts para análisis y limpieza de datos
+    /tests          # Tests automatizados
+    /notebooks      # Jupyter notebooks (para exploración y presentación)
+    /environments   # Archivos de entorno (por ejemplo, environment.yml para conda)
+    /configs        # Configuración del proyecto (por ejemplo, configuración de la base de datos)
+    /data           # Datos (considera .gitignore si son grandes)
+        /raw        # Datos crudos, sin modificar
+        /processed  # Datos procesados y listos para análisis
+    /results        # Resultados del análisis, como CSV, modelos entrenados, etc.
+    /reports        # Informes del análisis, como HTML, PDF, LaTeX, etc.
+    /tools          # Herramientas y utilidades
+    /external       # Cualquier biblioteca externa que pueda ser necesaria
+    .gitignore      # Archivos y carpetas a ignorar en git
+    LICENSE.txt     # Licencia del proyecto
+    README.md       # Descripción del proyecto, instrucciones de instalación y uso
+    setup.py        # Script de instalación
+    requirements.txt # Dependencias del proyecto
 
 ## Guía de usuario
 ---
-Explica los pasos básicos sobre cómo usar la herramienta digital. Es una buena sección para mostrar capturas de pantalla o gifs que ayuden a entender la herramienta digital.
+_Explica los pasos básicos sobre cómo usar la herramienta digital. Es una buena sección para mostrar capturas de antalla o gifs que ayuden a entender la herramienta digital._
+Este código se debe ejecutar manualmente cada vez que el usuario desee actualizar el historial de datos de contrataciones públicas. Para ello el usuario deberá seguir los siguientes pasos:
+1. _In progress_
+2. _In progress_
+3. _..._
  	
 ## Guía de instalación
 ---
-Paso a paso de cómo instalar la herramienta digital. En esta sección es recomendable explicar la arquitectura de carpetas y módulos que componen el sistema.
+Antes de ejecutar el código, el usuario debe asegurarse que tiene instalados los siguientes componentes:
+- Python
+- MongoDB
 
-Según el tipo de herramienta digital, el nivel de complejidad puede variar. En algunas ocasiones puede ser necesario instalar componentes que tienen dependencia con la herramienta digital. Si este es el caso, añade también la siguiente sección.
+Una vez instalados esos componentes, el usuario debe ejecutar los scripts en el siguiente orden:
 
-La guía de instalación debe contener de manera específica:
-- Los requisitos del sistema operativo para la compilación (versiones específicas de librerías, software de gestión de paquetes y dependencias, SDKs y compiladores, etc.).
-- Las dependencias propias del proyecto, tanto externas como internas (orden de compilación de sub-módulos, configuración de ubicación de librerías dinámicas, etc.).
-- Pasos específicos para la compilación del código fuente y ejecución de tests unitarios en caso de que el proyecto disponga de ellos.
+_La guía de instalación debe contener de manera específica:_
+_- Los requisitos del sistema operativo para la compilación (versiones específicas de librerías, software de gestión de paquetes y dependencias, SDKs y compiladores, etc.)._
+_- Las dependencias propias del proyecto, tanto externas como internas (orden de compilación de sub-módulos, configuración de ubicación de librerías dinámicas, etc.)._
+_- Pasos específicos para la compilación del código fuente y ejecución de tests unitarios en caso de que el proyecto disponga de ellos._
+
+## Tutoriales
+---
+_Paso a paso de cómo instalar la herramienta digital. Videos a Youtube?_
 
 ### Dependencias
 Descripción de los recursos externos que generan una dependencia para la reutilización de la herramienta digital (librerías, frameworks, acceso a bases de datos y licencias de cada recurso). Es una buena práctica describir las últimas versiones en las que ha sido probada la herramienta digital. 
@@ -73,14 +124,3 @@ La licencia especifica los permisos y las condiciones de uso que el desarrollado
 Incluye en esta sección una nota con el tipo de licencia otorgado a esta herramienta digital. El texto de la licencia debe estar incluído en un archivo *LICENSE.md* o *LICENSE.txt* en la raíz del repositorio.
 
 Si desconoces qué tipos de licencias existen y cuál es la mejor para cada caso, te recomendamos visitar la página https://choosealicense.com/.
-
-Si la herramienta que estás publicando con la iniciativa Código para el Desarrollo ha sido financiada por el BID, te invitamos a revisar la [licencia oficial del banco para publicar software](https://github.com/EL-BID/Plantilla-de-repositorio/blob/master/LICENSE.md)
-
-## Limitación de responsabilidades
-Disclaimer: Esta sección es solo para herramientas financiadas por el BID.
-
-El BID no será responsable, bajo circunstancia alguna, de daño ni indemnización, moral o patrimonial; directo o indirecto; accesorio o especial; o por vía de consecuencia, previsto o imprevisto, que pudiese surgir:
-
-i. Bajo cualquier teoría de responsabilidad, ya sea por contrato, infracción de derechos de propiedad intelectual, negligencia o bajo cualquier otra teoría; y/o
-
-ii. A raíz del uso de la Herramienta Digital, incluyendo, pero sin limitación de potenciales defectos en la Herramienta Digital, o la pérdida o inexactitud de los datos de cualquier tipo. Lo anterior incluye los gastos o daños asociados a fallas de comunicación y/o fallas de funcionamiento de computadoras, vinculados con la utilización de la Herramienta Digital.
