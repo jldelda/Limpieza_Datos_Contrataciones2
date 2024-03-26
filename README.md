@@ -43,48 +43,25 @@ _...In progress..._
 
 ## Estructura de carpetas
 
-|-Limpieza_Datos_Contratacoiones
-    |--/bin            # Scripts ejecutables y binarios
-    |--/docs           # Documentación (alternativamente /doc)
-        |--/adr        # Architecture Decision Records
-    |--/src            # Código fuente del proyecto
-        |--/data       # Scripts para descargar o generar datos
-        |--/database   # Scripts para configurar tu base de datos MongoDB
-        |--/analysis   # Scriptsc para análisis y limpieza de datos
-    |--/tests          # Testss automatizados
-    |--/notebooks      # Jupyter notebooks (para exploración y presentación)
-    |--/environments   # Archivos de entorno (por ejemplo, environment.yml para conda)
-    |--/configs        # Configuración del proyecto (por ejemplo, configuración de la base de datos)
-    |--/data           # Datos (considera .gitignore si son grandes)
-        |--/raw        # Datos crudos, sin modificar
-        |--/processed  # Datos procesados y listos para análisis
-    |--/results        # Resultados del análisis, como CSV, modelos entrenados, etc.
-    |--/reports        # Informes del análisis, como HTML, PDF, LaTeX, etc.
-    |--/tools          # Herramientas y utilidades
-    |--/external       # Cualquier biblioteca externa que pueda ser necesaria
-    |--/gitignore      # Archivos y carpetas a ignorar en git
-    |--/LICENSE.txt     # Licencia del proyecto
-    |--/README.md       # Descripción del proyecto, instrucciones de instalación y uso
-    |--/setup.py        # Script de instalación
-    |--/requirements.txt # Dependencias del proyecto
+**Limpieza datos de contrataciones**
 
-- `README.md`
-- `.gitignore`
-- `data`
+- `README.md`  # Descripción del proyecto, instrucciones de instalación y uso
+- `.gitignore` # Archivos y carpetas a ignorar en git
+- `bin`        # Scripts ejecutables y binarios
+- `data`       # Scripts para descargar o generar datos
   - `raw`
   - `processed`
-- `docs`
-  - `images`
-- `notebooks`
-- `src`
+- `notebooks`  # Jupyter notebooks (para exploración y presentación)
+- `documentación` # Documentación (alternativamente /doc)
+  - `reporte1.pdf`
+  - `reporte2.pdf`
+  - `reporte3.pdf`
+- `src`        # Código fuente del proyecto
   - `__init__.py`
-  - `module1.py`
-  - `module2.py`
-- `tests`
-  - `__init__.py`
-  - `test_module1.py`
-  - `test_module2.py`
-dd
+  - `data`     # Scripts para configurar tu base de datos MongoDB
+  - `1.1 Data Download.ipynb` # Script para descargar los datos
+- `LICENSE.txt`      # Licencia del proyecto
+- `requirements.txt` # Dependencias del proyecto
 
 ## Guía de usuario
 ---
