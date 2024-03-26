@@ -68,6 +68,25 @@ _...In progress..._
     |--/setup.py        # Script de instalación
     |--/requirements.txt # Dependencias del proyecto
 
+├── src
+│   ├── controller
+│   │   ├── **/*.css
+│   ├── views
+│   ├── model
+│   ├── index.js
+├── public
+│   ├── css
+│   │   ├── **/*.css
+│   ├── images
+│   ├── js
+│   ├── index.html
+├── dist (or build
+├── node_modules
+├── package.json
+├── package-lock.json
+└── .gitignore
+
+
 ## Guía de usuario
 ---
 _Explica los pasos básicos sobre cómo usar la herramienta digital. Es una buena sección para mostrar capturas de antalla o gifs que ayuden a entender la herramienta digital._
