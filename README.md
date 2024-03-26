@@ -50,8 +50,8 @@ _...In progress..._
     - /src            # Código fuente del proyecto
     -     /data       # Scripts para descargar o generar datos
     -     /database   # Scripts para configurar tu base de datos MongoDB
-    -     /analysis   # Scripts para análisis y limpieza de datos
-    - /tests          # Tests automatizados
+    -     /analysis   # Scriptsc para análisis y limpieza de datos
+    - /tests          # Testss automatizados
     - /notebooks      # Jupyter notebooks (para exploración y presentación)
     - /environments   # Archivos de entorno (por ejemplo, environment.yml para conda)
     - /configs        # Configuración del proyecto (por ejemplo, configuración de la base de datos)
