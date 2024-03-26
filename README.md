@@ -68,24 +68,23 @@ _...In progress..._
     |--/setup.py        # Script de instalación
     |--/requirements.txt # Dependencias del proyecto
 
-├── src
-│   ├── controller
-│   │   ├── **/*.css
-│   ├── views
-│   ├── model
-│   ├── index.js
-├── public
-│   ├── css
-│   │   ├── **/*.css
-│   ├── images
-│   ├── js
-│   ├── index.html
-├── dist (or build
-├── node_modules
-├── package.json
-├── package-lock.json
-└── .gitignore
-
+- `README.md`
+- `.gitignore`
+- `data`
+  - `raw`
+  - `processed`
+- `docs`
+  - `images`
+- `notebooks`
+- `src`
+  - `__init__.py`
+  - `module1.py`
+  - `module2.py`
+- `tests`
+  - `__init__.py`
+  - `test_module1.py`
+  - `test_module2.py`
+dd
 
 ## Guía de usuario
 ---
