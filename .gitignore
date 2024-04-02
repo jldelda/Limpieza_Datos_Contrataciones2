@@ -1,2 +1,7 @@
 pymongo_env
 data
+data/Processed
+data/Raw
+EDCA_env01
+notebooks/OLD
+getting-started-app
